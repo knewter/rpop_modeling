@@ -24,6 +24,18 @@ describe Scene do
         subject.step!
         node.data[:foo].should == 'bar'
       end
+
+      context "collecting data" do
+        it "should know which data to collect" do
+          subject.setup_series_data_collector do |s|
+            pop_count = 1
+            {:population => pop_count}
+          end
+          subject.step!
+          subject.step!
+          subject.series_data.should == [{:population => 1}, {:population => 1}]
+        end
+      end
     end
 
     context "working with nodes" do

@@ -1,8 +1,16 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    coderay (0.9.8)
     diff-lcs (1.1.2)
+    method_source (0.4.1)
+      ruby_parser (>= 2.0.5)
     mustache (0.99.3)
+    pry (0.8.3)
+      coderay (>= 0.9.7)
+      method_source (>= 0.4.0)
+      ruby_parser (>= 2.0.5)
+      slop (>= 1.5.3)
     rdiscount (1.6.8)
     rocco (0.6)
       mustache
@@ -15,10 +23,15 @@ GEM
     rspec-expectations (2.6.0)
       diff-lcs (~> 1.1.2)
     rspec-mocks (2.6.0)
+    ruby_parser (2.0.6)
+      sexp_processor (~> 3.0)
+    sexp_processor (3.0.5)
+    slop (1.5.5)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  pry
   rocco
   rspec
